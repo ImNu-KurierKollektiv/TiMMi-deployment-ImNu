@@ -1,22 +1,222 @@
 {
   "nodes": {
-    "nixpkgs": {
+    "dns": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
-        "lastModified": 1664370076,
-        "narHash": "sha256-NDnIo0nxJozLwEw0VPM+RApMA90uTfbvaNNtC5eB7Os=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "854fdc68881791812eddd33b2fed94b954979a8e",
+        "lastModified": 1635273082,
+        "narHash": "sha256-EHiDP2jEa7Ai5ZwIf5uld9RVFcV77+2SUxjQXwJsJa0=",
+        "owner": "kirelagin",
+        "repo": "dns.nix",
+        "rev": "c7b9645da9c0ddce4f9de4ef27ec01bb8108039a",
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
+        "owner": "kirelagin",
+        "repo": "dns.nix",
+        "type": "github"
+      }
+    },
+    "dns_2": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "timmi-deployment",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1635273082,
+        "narHash": "sha256-EHiDP2jEa7Ai5ZwIf5uld9RVFcV77+2SUxjQXwJsJa0=",
+        "owner": "kirelagin",
+        "repo": "dns.nix",
+        "rev": "c7b9645da9c0ddce4f9de4ef27ec01bb8108039a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kirelagin",
+        "repo": "dns.nix",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1614513358,
+        "narHash": "sha256-LakhOx3S1dRjnh0b5Dg3mbZyH0ToC9I8Y2wKSkBaTzU=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5466c5bbece17adaab2d82fae80b46e807611bf3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1614513358,
+        "narHash": "sha256-LakhOx3S1dRjnh0b5Dg3mbZyH0ToC9I8Y2wKSkBaTzU=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5466c5bbece17adaab2d82fae80b46e807611bf3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nix-deploy-git": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1637044180,
+        "narHash": "sha256-5r3pOGql5wr0PtuOb0rJ0EeorcT3A43tWYRRvnZB0jk=",
+        "owner": "johannesloetzsch",
+        "repo": "nix-deploy-git",
+        "rev": "c1c0b1def56009e8647bfe57c555c6bea0fb2b1a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "johannesloetzsch",
+        "ref": "main",
+        "repo": "nix-deploy-git",
+        "type": "github"
+      }
+    },
+    "nix-deploy-git_2": {
+      "inputs": {
+        "nixpkgs": [
+          "timmi-deployment",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1637044180,
+        "narHash": "sha256-5r3pOGql5wr0PtuOb0rJ0EeorcT3A43tWYRRvnZB0jk=",
+        "owner": "johannesloetzsch",
+        "repo": "nix-deploy-git",
+        "rev": "c1c0b1def56009e8647bfe57c555c6bea0fb2b1a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "johannesloetzsch",
+        "ref": "main",
+        "repo": "nix-deploy-git",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1666109165,
+        "narHash": "sha256-BMLyNVkr0oONuq3lKlFCRVuYqF75CO68Z8EoCh81Zdk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "32096899af23d49010bd8cf6a91695888d9d9e73",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-22_05": {
+      "locked": {
+        "lastModified": 1665870850,
+        "narHash": "sha256-EkC/Kkc9cr2orI868OHnh6F8/aqS4TZy38ie+KnhfS8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "945a85cb7ee31f5f8c49432d77b610b777662d4f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "release-22.05",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "dns": "dns",
+        "nix-deploy-git": "nix-deploy-git",
+        "nixpkgs": "nixpkgs",
+        "sops-nix": "sops-nix",
+        "timmi-deployment": "timmi-deployment"
+      }
+    },
+    "sops-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nixpkgs-22_05": "nixpkgs-22_05"
+      },
+      "locked": {
+        "lastModified": 1666078616,
+        "narHash": "sha256-ifW3GhIxuKv5+AidKAPpmtS8M7TY2d7VS6eFnaCFdfU=",
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "rev": "8e470d4eac115aa793437e52e84e7f9abdce236b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "type": "github"
+      }
+    },
+    "sops-nix_2": {
+      "inputs": {
+        "nixpkgs": [
+          "timmi-deployment",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1637050424,
+        "narHash": "sha256-8IaY0/Y5g3jJiQzPN0PflKFcFEE1C29DZZ0dF1NIJ6s=",
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "rev": "3c53d012ac77d4bd8428f9c847709e287c897ad9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "type": "github"
+      }
+    },
+    "timmi-deployment": {
+      "inputs": {
+        "dns": "dns_2",
+        "nix-deploy-git": "nix-deploy-git_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "sops-nix": "sops-nix_2"
+      },
+      "locked": {
+        "lastModified": 1666209961,
+        "narHash": "sha256-CQYe6EcrVZhIzCOyPs0FOvF4kaEuyogNbGXhepvEeyw=",
+        "path": "/etc/nixos/timmi~/deployment",
+        "type": "path"
+      },
+      "original": {
+        "path": "/etc/nixos/timmi~/deployment",
+        "type": "path"
       }
     }
   },

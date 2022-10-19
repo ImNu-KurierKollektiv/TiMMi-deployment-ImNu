@@ -134,14 +134,19 @@
     permitRootLogin = "prohibit-password";
   };
 
-
- environment.systemPackages = with pkgs; [
-   vim git
- ];
-
   nix.extraOptions = "experimental-features = nix-command flakes";
 
+  networking = {
+    hostName = "timmi-imnu";
+    domain = "timmi.fahrradkurier-dresden.de";
 
-  networking.hostName = "timmi-imnu";
+    interfaces.ens3 = {
+      ipv6.addresses = [
+        {
+          address = "2a01:4f8:c012:f1e6::1";
+          prefixLength = 64;
+        }
+      ];
+    };
+  };
 }
-
