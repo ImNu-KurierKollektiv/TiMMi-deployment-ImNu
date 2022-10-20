@@ -35,10 +35,13 @@
       timmi-imnu = nixpkgs.lib.nixosSystem (lib.mergeAttrs commonAttrs {
         modules = [
           ./hosts/timmi-imnu/configuration.nix
-          ./hosts/timmi-imnu/hardware-configuration.nix
           timmi-deployment.nixosModules.default
+          timmi-deployment.nixosModules.binarycache-client
           ./modules/dns.nix { _module.args = { inherit dns; }; }
           ./modules/nginx/common.nix
+          ./modules/nginx/timmi.nix
+          ./modules/timmi/users.nix
+          ./modules/timmi/systemd.nix
         ];
       });
 
