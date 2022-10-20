@@ -38,6 +38,7 @@
           ./hosts/timmi-imnu/hardware-configuration.nix
           timmi-deployment.nixosModules.default
           ./modules/dns.nix { _module.args = { inherit dns; }; }
+          ./modules/nginx/common.nix
         ];
       });
 

@@ -1,9 +1,9 @@
-{ dns, ... }:
+{ dns, config, ... }:
 
 with dns.lib.combinators; rec {
   SOA = {
     nameServer = "ns1";
-    adminEmail = "info@fahrradkurier-dresden.de";
+    adminEmail = "${config.security.acme.defaults.email}";
     serial = 2022101900;
   };
 

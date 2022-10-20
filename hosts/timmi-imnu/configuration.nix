@@ -136,6 +136,8 @@
 
   nix.extraOptions = "experimental-features = nix-command flakes";
 
+  security.acme.defaults.email = "info@fahrradkurier-dresden.de";
+
   networking = {
     hostName = "timmi-imnu";
     domain = "timmi.fahrradkurier-dresden.de";
@@ -147,6 +149,11 @@
           prefixLength = 64;
         }
       ];
+    };
+
+    defaultGateway6 = {
+      address = "fe80::1";
+      interface = "ens3";
     };
   };
 }
