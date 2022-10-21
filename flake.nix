@@ -19,9 +19,13 @@
       url = "path:/etc/nixos/timmi~/deployment";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    timmi-invoice = {
+      url = "path:/etc/nixos/timmi~/invoice";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, sops-nix, nix-deploy-git, dns, timmi-deployment }:
+  outputs = { self, nixpkgs, sops-nix, nix-deploy-git, dns, timmi-deployment, timmi-invoice }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
@@ -41,7 +45,7 @@
           ./modules/nginx/common.nix
           ./modules/nginx/timmi.nix
           ./modules/timmi/users.nix
-          ./modules/timmi/systemd.nix
+          ./modules/timmi/systemd.nix { _module.args = { inherit timmi-invoice; }; }
         ];
       });
 

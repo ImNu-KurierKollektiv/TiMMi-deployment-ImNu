@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, timmi-invoice, ...}:
 {
   ## TODO: separate services for client/server
 
@@ -22,7 +22,7 @@
     "timmi-invoice" = {
       path = with pkgs; [ nix git ];
       script = ''
-        nix run
+        ${timmi-invoice.legacyPackages.x86_64-linux.timmi-invoice-without-pm2}/bin/invoice
       '';
       serviceConfig = rec {
         Type = "simple";
